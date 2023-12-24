@@ -1,0 +1,49 @@
+  
+  <!-- 
+NAME @: Diljyot Singh
+TOPIC @: Image Search Engine
+DATE @: 23/12/2023
+-->
+
+  
+  <!-----------------------------  BASE SECTION  ----------------------------------->
+
+  {% extends "base.html"%}
+
+  <!-------------------------------------------------------------------------------->
+
+{% block content %}
+
+
+  <!---------------------------  HOME BODY SECTION   ------------------------------>
+
+<!-- Add a background color and large text to the whole page -->
+<body>
+<h2 align = "center"><b>ABOUT THE PROJECT</b></h2><br>
+
+<p>Image search engine can be used to find similar images from the database. Images are first converted into 5 different fragments 
+  and histogram for each of the fragment is calculated. Next, as an output, pictures from the database with comparable 
+    histograms are retrieved. Chi-square distances are measured between the input image and the images available in the database</p>
+
+
+  <!-----------------------------  FORM SECTIOIN  ----------------------------------->
+  
+
+  <!----------------------------------------------------------------------------->
+<div style = "background-color: white; border: 5px solid;">
+<form align = "center" method="POST" enctype="multipart/form-data">
+    <br> 
+    <label for = "input">Upload Image:</label>
+    <input type = "file" id ="input" accept="image/*" name = "upload" required><br><br>
+
+    <input type = "reset" style = "background-color: black; color: white;">
+    <input type = "submit" Value = "Search" style = "background-color: black; color: white;">
+</form>
+<br>
+</div>
+
+</body>
+
+{% endblock %}
+
+  <!-----------------------------  THE END  ----------------------------------->
